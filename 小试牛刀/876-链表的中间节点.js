@@ -5,7 +5,19 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var middleNode = function(head) {
+var middleNode = function(arr){
     const newArr=[]
-    const n=head.length%2===0?head.length%2:(head.length+1)%2
+    let left=0
+    let right =arr.length-1
+    while(left<=right){
+        newArr.push(arr[right])
+        left++;
+        right--;
+        if(arr.length%2===1 && right===(arr.length/2)-1){
+            newArr.push(arr[right])
+            return
+        }
+    }
+    return newArr
 };
+console.log(middleNode([1,2,3,4,5]))
