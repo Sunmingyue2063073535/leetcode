@@ -9,16 +9,26 @@
  * @param {number} val
  * @return {number}
  */
-var removeElement = function(nums, val) {
-    let size =nums.length
-    for (let i = 0; i < size; i++) {
-        if(nums[i] === val){
-            for (let j = i + 1; j < size; j++) {
-                nums[j - 1] = nums[j]
-            }
-            i--
-            size--
+// var removeElement = function(nums, val) {
+//     let size =nums.length
+//     for (let i = 0; i < size; i++) {
+//         if(nums[i] === val){
+//             for (let j = i + 1; j < size; j++) {
+//                 nums[j - 1] = nums[j]
+//             }
+//             i--
+//             size--
+//         }
+//     }
+//     return size
+// };
+function removeElement(nums, val) {
+    let i = -1;
+    for (let j = 0; j < nums.length; j++) {
+        if (nums[j] !== val) {
+            i++;
+            nums[i] = nums[j];
         }
     }
-    return size
-};
+    return i + 1;
+}
