@@ -24,12 +24,20 @@ var findMiddleIndex = function(nums) {
 // console.log(Array.from(s))
 // s.clear()
 // console.log(s)
-const m = new Map()
-m.set('a',1)
-m.set('a',2)
-m.set(['a'],1)
-console.log(m.get['a'])
-console.log(m.get('a'))
-const a= m.get('a')
-console.log(m)
-console.log(a)
+// const m = new Map()
+// m.set('a',1)
+// m.set('a',2)
+// m.set(['a'],1)
+// console.log(m.get['a'])
+// console.log(m.get('a'))
+// const a= m.get('a')
+// console.log(m)
+// console.log(a)
+const str = 'abbcd'
+const str1 = 'caafr'
+const m =new Map()
+
+for (let i = 0; i < str1.length; i++) {
+    m.set(str[i],i)
+}
+console.log(m.values())
